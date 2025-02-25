@@ -1,0 +1,12 @@
+a {
+    text-decoration: none; 
+    font-size: 18px;
+    color: black; 
+}
+form {
+    display: flex;
+    justify-content: center;
+}
+.input_file {
+    color: transparent;
+}

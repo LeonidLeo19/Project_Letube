@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Реєстрація</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/static/reg.css">
+</head>
+
+<body>
+<form action="/register" method="post">
+<label class="Container">Введіть свій імейл: </label>
+<input name="email" type="email" required>
+<br>
+<label class="Container">Введіть пароль: </label>
+<input type="password" minlength="8" name="password" required >
+<br>
+<button class="Container" type="submit">Зареєструватися</button>
+<br>
+<div>
+<label>Вже є акаунт?</label>
+<a href="/Enter">Увійти</a>
+</div>
+</form>
+
+
+</body>
+
+
+
+</html>

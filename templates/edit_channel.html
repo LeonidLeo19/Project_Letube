@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Головна</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/static/edit_channel.css">
+</head>
+
+<body>
+    <a href="/home/{{user_id_}}" class="home">На головну</a>
+    <br>
+    <form action="/sumbit_edits/{{user_id_}}" method="post" enctype="multipart/form-data">
+    <label>Завантажити аватар:</label>
+    <input class="input_file" type="file" name="avatar" accept=".jpg,.jpeg,.png">
+    <label>Змінити нікнейм:</label>
+    <input type="text" maxlength="24" name="new_nickname" mainlenght="4">
+    <button type="submit">Готово</button>
+    </form>
+</body>
+
+
+
+</html>

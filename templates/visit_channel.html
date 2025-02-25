@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Канал</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/static/visit_channel.css">
+</head>
+
+<body >
+    <a href="/home/{{user_id_}}">
+        <img class="logo" src="/static/WebLogo.png">
+        <label class="logoText">LeTube</label>
+    </a>
+    <br>
+    <br>
+    <div class="all_content">
+    <div class="avatar-container">
+        <img class="avatar" src="/static/Avatar/avatar_{{author_id}}.jpg">
+        {%if author.nickname%}
+        <label>{{author.nickname}}</label>
+        {%else%}
+        <label>NoName</label>
+        {%endif%}
+    </div>
+    <a href="/home/{{user_id}}" class="home">На головну</a>
+
+</div>
+
+<div class="user_videos">
+    {%if videos_names%}
+    <p class="line">Відео автора:</p>
+    {%endif%}
+    <ul class="videopre">
+        {%for video in videos_names%}
+        <li class="videolink">
+            {%if video.preview%} 
+            <a href="/video/{{ video.id }}/{{ user_id }}">
+                <img src="/static/Previews/preview_{{ video.id }}.jpg" alt="Preview Image" class="PreviewImage">
+                <a href="/video/{{video.id}}/{{user_id_}}"><div class="filename">{{video.filename}}</div></a>
+            </a>
+            {%endif%}
+        </li>
+        <br>
+    {%endfor%}
+    
+    </ul>
+
+</div>
+</body>
+
+
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Головна</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/static/main.css">
+</head>
+
+<body>
+<a href="/home/{{user_id_}}">На головну</a>
+<br>
+<form action="/upload/{{ user_id_ }}" method="post" enctype="multipart/form-data">
+    <label>Виберіть відео</label>
+    <input class="input_file" type="file" name="video" accept=".mp4" required>
+    <br>
+    <label> Введіть назву файлу</label>
+    <input type="text" name="video_name" required maxlength="35">
+    <br>
+    <label>Виберіть попереднє зображення</label>
+    <input class="input_file" type="file" name="preview" accept=".jpg,.jpeg,.png">
+    <br>
+    <button type="submit">Готово</button>
+    
+</form>
+
+</body>
+
+
+
+</html>

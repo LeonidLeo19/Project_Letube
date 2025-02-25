@@ -1,0 +1,226 @@
+video {
+    width: 850px;  
+    height: 480px;
+    transition: all 0.3s ease-in-out; 
+    position: absolute;
+    top:80px;
+    left: 120px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    background-color: black;
+  }
+
+.video_elements {
+    display: flex;
+    flex-direction: column;
+}
+
+.video_name {
+    position: absolute; 
+    left: 125px; 
+    top: 560px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.Account {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    text-decoration: none; 
+    font-size: 18px;
+    color: black; 
+}
+a {
+    text-decoration: none; 
+    font-size: 18px;
+    color: black; 
+}
+.avatar {
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    border-radius: 50%;
+}
+.avatarA {
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute; 
+    left: 125px; 
+    top: 610px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+}
+.nickname {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    left: 170px; 
+    top: 610px;
+}
+
+.Like {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 650px; 
+    top: 615px;
+ 
+}
+.subscribe {
+    position: absolute;
+    left: 370px; 
+    top: 615px;
+    background-color: black;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;  
+    color: white;
+    padding: 5px 10px;
+}
+
+.user_comment {
+    position: absolute;
+    top: 650px;
+    left: 125px;
+    width: 850px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.label_comments {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.comment_item {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f9f9f9; 
+}
+
+.whose_comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+.whose_comment img.avatar {
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.whose_comment p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.comment_text {
+    font-size: 16px;
+    color: #333;
+    margin-left: 45px;
+    margin-top: 3px; 
+}
+
+.videopre {
+    position: absolute;
+    right: 60px;
+    top: 60px;
+    width: 320px; 
+    overflow-y: auto; 
+    padding: 0 10px;
+    margin: 0;
+}
+
+.videolink {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    transition: background 0.3s;
+    
+}
+
+.videolink:hover {
+    background: #ddd;
+}
+
+.videolink img {
+    width: 120px; 
+    height: 70px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.nickname_filename {
+    margin-left: 10px;
+}
+
+.filename {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.avtor_nickname {
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+}
+
+.videolink:empty {
+    display: none;
+}
+.logo {
+    width: 70px;
+    height: 60px;
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    left: 625px;
+    border-radius: 8px;   
+}
+.logoText {
+    position: absolute;
+    left:700px;
+    top: 20px;
+    color:black;
+    font-weight: bold;
+    font-size: 28px;
+}
+.LikeAmount p {
+    position: absolute;
+    left: 685px;
+    top:605px;
+    
+}
+.subscribe_amount {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    position: absolute;
+    left: 170px; 
+    top: 630px;
+}

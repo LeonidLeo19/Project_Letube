@@ -1,0 +1,15 @@
+.Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input, button {
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+}
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

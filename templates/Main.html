@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Канал</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/static/main.css">
+</head>
+
+<body >
+    <a href="/home/{{user_id_}}">
+        <img class="logo" src="/static/WebLogo.png">
+        <label class="logoText">LeTube</label>
+    </a>
+    <br>
+    <br>
+    <div class="all_content">
+    <div class="avatar-container">
+        <img class="avatar" src="/static/Avatar/avatar_{{user_id_}}.jpg">
+        {%if user.nickname%}
+        <label>{{user.nickname}}</label>
+        {%else%}
+        <label>NoName</label>
+        {%endif%}
+    </div>
+    <a href="/home/{{user_id_}}" class="home">На головну</a>
+    <br>
+    <br>
+    <a href="/edit_channel/{{user_id_}}">Персоналізувати канал</a>
+    <br>
+<a href="/new_video/{{user_id_}}">Завантажити нове відео</a>
+
+<br>
+
+
+<a href="/Enter"> Вийти </a>
+
+</div>
+<div class="user_videos">
+    {%if videos_names%}
+    <p class="line">Ваші відео:</p>
+    {%endif%}
+    <ul class="videopre">
+        {%for video in videos_names%}
+        <li class="videolink">
+            <a href="/delete/{{video.id}}/{{user_id_}}" class="spot">Видалити</a>
+            <a href="/video/{{ video.id }}/{{ user_id_ }}">
+                <img src="/static/Previews/preview_{{ video.id }}.jpg" alt="Preview Image" class="PreviewImage">
+                <a href="/video/{{video.id}}/{{user_id_}}"><div class="filename">{{video.filename}}</div></a>
+            </a>
+        </li>
+        <br>
+    {%endfor%}
+    
+    </ul>
+
+</div>
+</body>
+
+
+
+</html>

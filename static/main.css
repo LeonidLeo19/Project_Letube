@@ -1,0 +1,95 @@
+a {
+    text-decoration: none; 
+    font-size: 18px;
+    color: black; 
+}
+.all_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.avatar {
+    width: 150px; 
+    height: 150px;
+    background-color: black;
+    border-radius: 50%;
+    margin-left: -100px;
+}
+
+.home {
+    position: fixed;
+    left: 10px;
+    top:10px;
+}
+
+.avatar-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    gap: 40px; 
+}
+label {
+    font-size: 52px;
+    color: black;
+}
+.input_file {
+    color: transparent;
+}
+.logo {
+    width: 70px;
+    height: 60px;
+    background-color: transparent;
+    border: 0px;
+    position: absolute;
+    left: 675px;
+    border-radius: 8px;   
+    margin: 0;
+    top:7px;
+}
+.logoText {
+    position: absolute;
+    left:750px;
+    top: 20px;
+    color:black;
+    font-weight: bold;
+    font-size: 28px;
+}
+ul {
+    list-style-type: none; 
+    padding: 0;             
+    margin: 0;              
+}
+.videopre {
+    display: flex;
+    flex-direction: row;
+    top: 100px;
+    left:100px;
+    gap: 15px;
+    padding: 80px;
+    padding-left: 200px;
+    flex-wrap: wrap;
+}
+.videolink {
+    display: flex;
+    flex-direction: column;
+}
+.PreviewImage {
+    width: 360px;
+    max-width: 360px;
+    height: 200px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 8px;    
+    object-fit: contain;
+    background-color: black;
+}
+.line {
+    position: absolute;
+    left:210px;
+    top:400px;
+    font-size: 18px;
+}
+.spot {
+    padding-left: 280px;
+}

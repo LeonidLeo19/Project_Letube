@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>{{video_name.filename}}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/static/Video.css">
+</head>
+
+<body>
+    <a href="/home/{{user_id_}}">
+        <img class="logo" src="/static/WebLogo.png">
+        <label class="logoText">LeTube</label>
+    </a>
+    <a href="/home/{{user_id_}}" class="home">На головну</a>
+    <a href="/main/{{user_id_}}" class="Account">
+        {% if avatar_exists %}
+        <img class="avatar" src="/static/Avatar/avatar_{{user_id_}}.jpg">
+       {% else %}
+       <img class="avatar" src="/static/Avatar/default_avatar.jpg">
+       {% endif %}</a>
+    <div class="video_elements">
+        <video controls>
+        <source src="{{ watch_video }}" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+    </video>
+    
+    <p class="video_name">{{video_name.filename}}</p>
+    
+    <img class="avatarA" src="/static/Avatar/avatar_{{video_name.user_id}}.jpg">
+    {% for user in Users %}
+            {% if user.id == video_name.user_id %}
+            <p class="nickname">
+                {% if user.nickname %}
+                    {{ user.nickname }}
+                {% else %}
+                    NoName
+                {% endif %}
+            </p>
+            {% endif %}
+        {% endfor %}
+        <p class="subscribe_amount">Підписалося {{subscribe_amount}} користувачів</p>
+    </div>
+    <a class="subscribe" href="/subscribe/{{user_id_}}/{{video_name.user_id}}/{{video_name.id}}">
+        {%if subscribed%}
+            Відписатися
+        {%else%}
+            Підписатися
+        {%endif%}
+    </a>
+    <a class="LikeAmount" href="/like/{{user_id_}}/{{video_name.id}}">
+    {%if liked%}
+    <img class="Like" src="/static/Like.png">
+    <p class="LikeAmount"> {{like_amount}}</p>
+    {%else%}
+    <img class="Like" src="/static/Like.svg.png">
+    <p class="LikeAmount">{{like_amount}}</p>
+    {%endif%}
+    </a>
+    <div class="user_comment">
+    <p class="label_comments">
+        Коментарі:
+    </p>
+    <form method="post" action="/post_comment/{{user_id_}}/{{video_name.id}}">
+    <label>
+        Додайте коментар:
+    </label>
+    <input type="text" required name="comment_text">
+    <button type="submit">Відправити</button>
+    </form>
+    <br>
+    {% for coment in comments %}
+    {% if coment.video_id == video_name.id %}
+    <div class="comment_item">
+        <div class="whose_comment">
+            <img class="avatar" src="/static/Avatar/avatar_{{coment.user_id}}.jpg">
+            {% for user in Users %}
+                {% if user.id == coment.user_id %}
+                {% if user.nickname %}
+                <p>{{ user.nickname }}</p>
+                {% else %}
+                <p>NoName</p>
+                {% endif %}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <p class="comment_text">{{ coment.text }}</p>
+    </div>
+    {% endif %}
+{% endfor %}
+    </div>
+
+
+
+    <ul class="videopre">
+
+        {%for video in videos_names%}
+        {%if video.id!=video_id%}
+        <li class="videolink">
+            <a href="/video/{{ video.id }}/{{ user_id_ }}">
+                <img src="/static/Previews/preview_{{ video.id }}.jpg" alt="Preview Image">
+            </a>
+            <div class="nickname_filename">
+            <a href="/video/{{video.id}}/{{user_id_}}"><div class="filename">{{video.filename}}</div></a>
+            {% for user in Users %}
+                {% if user.id == video.user_id %}
+                <p class="avtor_nickname">
+                    {% if user.nickname %}
+                        {{ user.nickname }}
+                    {% else %}
+                        NoName
+                    {% endif %}
+                </p>
+                {% endif %}
+            {% endfor %}
+                </div>
+            </div>
+        </li>
+        {%endif%}
+        <br>
+    {%endfor%}
+    
+    </ul>
+
+</body>
+
+
+
+</html>
