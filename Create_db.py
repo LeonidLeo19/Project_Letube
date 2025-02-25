@@ -54,11 +54,4 @@ class Comments(Base):
     text = Column(String, nullable=False)
 
 
-# Session = sessionmaker(bind=engine)
-# session=Session()
-# third=session.query(Video).filter_by(id=8).first()
-# third.preview=True
-# session.commit()
-# session.close()
-
 Base.metadata.create_all(engine)
